@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>R&B 100Taches | Conciergerie & petits travaux – 1566 St-Aubin (FR)</title>
+  <meta name="description" content="R&B 100Taches — Conciergerie, petits travaux, installations d’électroménager, jardinage, nettoyage de toitures. Devis gratuit sur rendez-vous. St-Aubin (FR) et environs. Tél : 079 517 30 04." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="R&B 100Taches" />
+  <meta property="og:description" content="Conciergerie & petits travaux à St-Aubin (FR) et environs. Devis gratuit sur rendez-vous. 079 517 30 04." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --text: #eaf0ff;
+      --muted: rgba(234,240,255,.75);
+      --line: rgba(234,240,255,.14);
+      --btn: rgba(255,255,255,.12);
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1080px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(110,231,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 110% 0%, rgba(167,139,250,.22), transparent 55%),
+        radial-gradient(1200px 900px at 50% 120%, rgba(110,231,255,.10), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 26px 18px 70px; }
+
+    header{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      max-width: var(--max); margin: 0 auto; padding: 12px 18px;
+      display:flex; align-items:center; justify-content: space-between; gap: 14px;
+    }
+    .brand{ display:flex; align-items:center; gap: 10px; min-width: 240px; }
+    .logo-img{
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(234,240,255,.14);
+    }
+    .brand strong{ display:block; letter-spacing: .2px; }
+    .brand small{ display:block; color: var(--muted); margin-top: 1px; }
+
+    .menu{ display:flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+    .menu a{
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .menu a:hover{ color: var(--text); border-color: var(--line); background: rgba(255,255,255,.04); }
+
+    .hero{
+      padding: 28px 0 10px;
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .brand{ min-width: auto; }
+    }
+    .panel{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    h1{
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4.2vw, 46px);
+      letter-spacing: -0.6px;
+      line-height: 1.1;
+    }
+    .tagline{
+      margin: 10px 0 14px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 62ch;
+    }
+
+    .badges{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .badge{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: .92rem;
+    }
+
+    .cta{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--btn);
+      color: var(--text);
+      font-weight: 650;
+    }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(110,231,255,.95), rgba(167,139,250,.95));
+      color: #07101c;
+    }
+    .btn:hover{ filter: brightness(1.06); }
+
+    .mini h3{ margin: 0 0 10px; font-size: 1.05rem; }
+    .mini .row{ display:flex; gap: 10px; align-items:flex-start; padding: 10px 0; border-top: 1px solid var(--line); }
+    .mini .row:first-of-type{ border-top: 0; padding-top: 0; }
+    .k{ color: var(--muted); min-width: 108px; }
+    .v{ color: var(--text); }
+    .v a{ text-decoration: underline; text-underline-offset: 3px; }
+
+    section{ margin-top: 18px; }
+    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .col-6{ grid-column: span 6; }
+    .col-12{ grid-column: span 12; }
+    @media (max-width: 900px){ .col-6{ grid-column: span 12; } }
+
+    h2{ margin: 0 0 10px; font-size: 1.35rem; letter-spacing: -0.2px; }
+    p{ margin: 8px 0 0; color: var(--muted); }
+
+    ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    li{ margin: 6px 0; }
+
+    .card-title{ display:flex; align-items:center; justify-content: space-between; gap: 10px; }
+    .pill{
+      font-size: .82rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      white-space: nowrap;
+    }
+    .note{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px dashed rgba(234,240,255,.22);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+    }
+    footer{
+      margin-top: 26px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      color: rgba(234,240,255,.62);
+      font-size: .95rem;
+      display:flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    }
+    footer a{ text-decoration: underline; text-underline-offset: 3px; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "R&B 100Taches",
+    "description": "Conciergerie et petits travaux à St-Aubin (FR) et environs. Devis gratuit sur rendez-vous.",
+    "telephone": "+41795173004",
+    "email": "RB100Taches@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "1566",
+      "addressLocality": "St-Aubin (FR)",
+      "addressCountry": "CH"
+    },
+    "areaServed": [
+      {"@type":"Place","name":"St-Aubin (FR)"},
+      {"@type":"Place","name":"Delley"},
+      {"@type":"Place","name":"Domdidier"},
+      {"@type":"Place","name":"Dompierre"},
+      {"@type":"Place","name":"Avenches"},
+      {"@type":"Place","name":"Payerne"},
+      {"@type":"Place","name":"Missy"},
+      {"@type":"Place","name":"Gletterens"},
+      {"@type":"Place","name":"Portalban"}
+    ],
+    "founder": "Helder LIMA"
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img class="logo-img" src="assets/logo.png" alt="Logo R&B 100Taches" width="44" height="44" />
+        <div>
+          <strong>R&amp;B 100Taches</strong>
+          <small>Conciergerie &amp; services — 1566 St-Aubin (FR) et environs</small>
+        </div>
+      </div>
+
+      <nav class="menu" aria-label="Navigation">
+        <a href="#services">Services</a>
+        <a href="#zone">Zone</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="haut">
+      <div class="panel">
+        <h1>Conciergerie &amp; petits travaux<br/>pour particuliers et petits commerces</h1>
+        <div class="tagline">
+          Basé à <strong style="color: var(--text);">1566 St-Aubin (FR)</strong>.
+          <strong style="color: var(--text);">Devis gratuit</strong> — <strong style="color: var(--text);">sur rendez-vous</strong>.
+        </div>
+
+        <div class="badges">
+          <div class="badge">Devis gratuit</div>
+          <div class="badge">Sur rendez-vous</div>
+          <div class="badge">Travail soigné</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="tel:+41795173004">Appeler : 079 517 30 04</a>
+          <a class="btn" href="https://wa.me/41795173004" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:RB100Taches@hotmail.com?subject=Demande%20de%20devis%20-%20R%26B%20100Taches">E-mail</a>
+        </div>
+
+        <div class="note">
+          <strong style="color: var(--text);">Devis gratuit :</strong> décris ton besoin (commune + photos si possible) et je te réponds rapidement.
+        </div>
+      </div>
+
+      <aside class="panel mini" aria-label="Infos rapides">
+        <h3>Infos rapides</h3>
+        <div class="row">
+          <div class="k">Entreprise</div>
+          <div class="v">R&amp;B 100Taches</div>
+        </div>
+        <div class="row">
+          <div class="k">Téléphone</div>
+          <div class="v"><a href="tel:+41795173004">079 517 30 04</a></div>
+        </div>
+        <div class="row">
+          <div class="k">E-mail</div>
+          <div class="v"><a href="mailto:RB100Taches@hotmail.com">RB100Taches@hotmail.com</a></div>
+        </div>
+        <div class="row">
+          <div class="k">Responsable</div>
+          <div class="v">Helder LIMA</div>
+        </div>
+        <div class="row">
+          <div class="k">Localisation</div>
+          <div class="v">1566 St-Aubin (FR)</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services" class="grid" aria-label="Services">
+      <div class="panel col-12">
+        <h2>Services</h2>
+        <p>Ce que je propose dès maintenant, et ce que j’ajoute progressivement selon la demande.</p>
+      </div>
+
+      <div class="panel col-6">
+        <div class="card-title">
+          <h2 style="margin:0;">Conciergerie / entretien</h2>
+          <span class="pill">Actif</span>
+        </div>
+        <ul>
+          <li>Petits travaux d’entretien</li>
+          <li>Suivi régulier / passages planifiés</li>
+          <li>Remise en ordre, contrôle visuel, petites interventions</li>
+        </ul>
+      </div>
+
+      <div class="panel col-6">
+        <div class="card-title">
+          <h2 style="margin:0;">Dépannage &amp; installations</h2>
+          <span class="pill">En développement</span>
+        </div>
+        <ul>
+          <li>Installation d’électroménager (selon appareils et accès)</li>
+          <li>Montage / fixation simple (étagères, supports, etc.)</li>
+          <li>Petites réparations du quotidien</li>
+        </ul>
+        <p class="note">Pour l’électricité : on définit ensemble précisément les interventions possibles selon les normes et le type de travaux.</p>
+      </div>
+
+      <div class="panel col-6">
+        <div class="card-title">
+          <h2 style="margin:0;">Nettoyage de toiture</h2>
+          <span class="pill">Sur demande</span>
+        </div>
+        <ul>
+          <li>Nettoyage / démoussage (selon accès et sécurité)</li>
+          <li>Contrôle visuel et recommandations</li>
+        </ul>
+      </div>
+
+      <div class="panel col-6">
+        <div class="card-title">
+          <h2 style="margin:0;">Jardinage</h2>
+          <span class="pill">Sur demande</span>
+        </div>
+        <ul>
+          <li>Entretien de base (selon saison)</li>
+          <li>Nettoyage extérieur, remise en état</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="zone" class="grid" aria-label="Zone d'intervention">
+      <div class="panel col-12">
+        <h2>Zone d’intervention</h2>
+        <p>Intervention sur :</p>
+        <ul>
+          <li>St-Aubin (FR)</li>
+          <li>Delley</li>
+          <li>Domdidier</li>
+          <li>Dompierre</li>
+          <li>Avenches</li>
+          <li>Payerne</li>
+          <li>Missy</li>
+          <li>Gletterens</li>
+          <li>Portalban</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="apropos" class="grid" aria-label="À propos">
+      <div class="panel col-12">
+        <h2>À propos</h2>
+        <p>
+          Je m’appelle <strong style="color: var(--text);">Helder LIMA</strong>. Je démarre mon activité à mon compte avec l’objectif de proposer un service fiable,
+          soigné et simple pour les clients qui veulent gagner du temps (conciergerie, entretien, petits travaux, etc.).
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="grid" aria-label="Contact">
+      <div class="panel col-12">
+        <h2>Contact</h2>
+        <ul>
+          <li><strong style="color: var(--text);">Téléphone :</strong> <a href="tel:+41795173004">079 517 30 04</a></li>
+          <li><strong style="color: var(--text);">WhatsApp :</strong> <a href="https://wa.me/41795173004" target="_blank" rel="noopener">envoyer un message</a></li>
+          <li><strong style="color: var(--text);">E-mail :</strong> <a href="mailto:RB100Taches@hotmail.com">RB100Taches@hotmail.com</a></li>
+          <li><strong style="color: var(--text);">Localisation :</strong> 1566 St-Aubin (FR)</li>
+          <li><strong style="color: var(--text);">Devis :</strong> gratuit — sur rendez-vous</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer aria-label="Pied de page">
+      <div>© <span id="y"></span> R&amp;B 100Taches — Helder LIMA</div>
+      <div>
+        <a href="#haut">Haut de page</a>
+        <span style="opacity:.55;"> · </span>
+        <a href="tel:+41795173004">079 517 30 04</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
